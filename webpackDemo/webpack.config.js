@@ -118,12 +118,7 @@ module.exports = function(options) {
 		        ], {
 		            ignore: [],
 		            copyUnmodified: true,
-		        }),
-           /* new webpack.ProgressPlugin(percentage_handler),
-            new webpack.DefinePlugin({
-                "process.env.ENVIRONMENT": JSON.stringify(options.buildType),
-                "process.env.VERSION": JSON.stringify(packageJson.version)
-            }),*/
+		        }),          
             extractCSS
         ],
         // 配置 webpack-dev-server
