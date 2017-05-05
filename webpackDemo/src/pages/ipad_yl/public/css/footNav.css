@@ -1,0 +1,114 @@
+
+	body,html{
+		height: 100% !important;
+	}
+	#FootNav{
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background: #fff;
+		border-top:1px solid #cfcfcf;
+		padding-top:5px;
+	}
+	.foot-nav {
+		height: .54rem !important;
+		
+	}
+	body{
+		background: #fff;
+	}
+	.foot-nav a {
+		margin: 0 .43rem;
+		width: .42rem;
+		padding: .05rem 0 !important;
+		line-height: 0 !important;
+		border: none !important;
+		background: #fff !important;
+		
+	}
+	
+	.foot-nav a img {
+		width: .22rem;
+		height: .22rem;
+	}
+	
+	.foot-nav span {
+		display: block;
+		color: #646464;
+		line-height: .2rem;
+		font-size: .1rem;
+	}
+	
+	.foot-fixed {
+		
+	}
+	/*此为基础样式*/
+	
+	html {
+		font-size: 100px;
+	}
+	/*以下PAD横屏*/
+	
+	@media screen and (min-width: 960px) {
+		html {
+			font-size: 100px;
+		}
+	}
+	/*以下为小PAD，过渡*/
+	@media screen and (min-width: 760px) {
+		html {
+			font-size: 100px;
+		}
+		.foot-nav a {
+			margin: 0 .4rem;
+		}
+	}
+	/*以下为迷你PAD，手机横屏*/
+	
+	@media screen and (max-width: 670px) {
+		html {
+			font-size: 100px
+		}
+		.foot-nav a {
+			margin: 0 .4rem;
+		}
+	}
+	/*以下为plus,L*/
+	
+	@media screen and (max-width: 440px) {
+		html {
+			font-size: 96px
+		}
+		.foot-nav a {
+			margin: 0 .21rem;
+		}
+	}
+	/*以下为手机标准尺寸-较大*/
+	
+	@media screen and (max-width: 400px) {
+		html {
+			font-size: 95px
+		}
+		.foot-nav a {
+			margin: 0 .17rem;
+		}
+	}
+	/*以下为手机标准尺寸,M*/
+	
+	@media screen and (max-width: 380px) {
+		html {
+			font-size: 94px
+		}
+	}
+	/*以下为小尺寸手机,S*/
+	
+	@media screen and (max-width: 330px) {
+		html {
+			font-size: 87px
+		}
+	}
+	
+	body {
+		background: #fff;
+	}

@@ -1,0 +1,12 @@
+﻿<script type="text/html" id="propertyeditor-dropdown">
+    <div class="custom-select">
+        <select class="form-control" data-bind="event:{blur: function(el, e){
+if($data.object != undefined){
+	if($data.object.PageCount != undefined){
+	var template=JSON.parse(sessionStorage.template);
+	template[title]=$data.editor.value_;
+	sessionStorage.template=JSON.stringify(template);
+	}
+}}},value: koValue, options: choices"  style="width:100%"></select>
+    </div>
+</script>

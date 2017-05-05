@@ -1,0 +1,11 @@
+﻿<script type="text/html" id="propertyeditor-string">
+    <input class="form-control" type="text" data-bind="event:{blur: function(el, e){
+if($data.object != undefined){
+	if($data.object.PageCount != undefined){
+		var storyTemplate = JSON.parse(sessionStorage.template);
+		storyTemplate[title]=$data.editor.value_;
+		sessionStorage.template=JSON.stringify(storyTemplate);
+	}
+ }}},
+value: koValue,attr:{readonly:title==='pageId' ||title==='surveyId'}" style="width:100%" />
+</script>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>日期hover</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="1.14285714" width="16" height="14.7692308"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="16" height="14.7692308" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M5.52921629,2.82161297 C5.75218243,3.04437067 5.89010989,3.35223184 5.89010989,3.69230769 C5.89010989,4.37204277 5.33907574,4.92307692 4.65934066,4.92307692 C3.97960558,4.92307692 3.42857143,4.37204277 3.42857143,3.69230769 C3.42857143,3.36754178 3.55435966,3.07215529 3.75987363,2.85221072 L3.42857143,0 L5.89010989,0 L5.52921629,2.82161297 Z M11.6830624,2.82161297 C11.9060286,3.04437067 12.043956,3.35223184 12.043956,3.69230769 C12.043956,4.37204277 11.4929219,4.92307692 10.8131868,4.92307692 C10.1334517,4.92307692 9.58241758,4.37204277 9.58241758,3.69230769 C9.58241758,3.36754178 9.70820582,3.07215529 9.91371979,2.85221072 L9.58241758,0 L12.043956,0 L11.6830624,2.82161297 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="8.61538462" height="4.92307692" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Page-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="默认样式(图标全选中)" transform="translate(-1395.000000, -337.000000)">
+            <g id="日期hover" transform="translate(1395.000000, 337.000000)">
+                <use id="Rectangle-11" stroke="#91C7FF" mask="url(#mask-2)" stroke-width="2.46560712" xlink:href="#path-1"></use>
+                <path d="M3.42857143,9.14285714 L5.89010989,9.14285714 L5.89010989,10.3736264 L3.42857143,10.3736264 L3.42857143,9.14285714 Z M7.12087912,9.14285714 L9.58241758,9.14285714 L9.58241758,10.3736264 L7.12087912,10.3736264 L7.12087912,9.14285714 Z M10.8131868,9.14285714 L13.2747253,9.14285714 L13.2747253,10.3736264 L10.8131868,10.3736264 L10.8131868,9.14285714 Z M3.42857143,11.6043956 L5.89010989,11.6043956 L5.89010989,12.8351648 L3.42857143,12.8351648 L3.42857143,11.6043956 Z M7.12087912,11.6043956 L9.58241758,11.6043956 L9.58241758,12.8351648 L7.12087912,12.8351648 L7.12087912,11.6043956 Z M10.8131868,11.6043956 L13.2747253,11.6043956 L13.2747253,12.8351648 L10.8131868,12.8351648 L10.8131868,11.6043956 Z" id="Combined-Shape" fill="#379AFF"></path>
+                <path d="M1.14285714,4.36984107 L15.370278,4.36984107" id="Line" stroke="#91C7FF" stroke-width="0.739682136" stroke-linecap="square"></path>
+                <use id="Combined-Shape" stroke="#379AFF" mask="url(#mask-4)" stroke-width="1.23280356" fill="#FFFFFF" xlink:href="#path-3"></use>
+            </g>
+        </g>
+    </g>
+</svg>

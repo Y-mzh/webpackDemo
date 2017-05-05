@@ -1,0 +1,52 @@
+*{margin:0;padding:0;}
+
+.header_top{
+    background: #FFFFFF;
+    height:48px;
+}
+.header_left{
+    padding:13px 0 0 44px;
+    float:left;
+    cursor:pointer;
+}
+.header_left_title{
+    font-family: microsoft yahei;
+    font-size: 18px;
+    color: #798C99;
+    margin-left:12px;
+    vertical-align: top;
+}
+.header_right>img{
+    margin:5px 80px 0 0;
+    width:36px;
+    height:36px;
+    float:right;
+}
+
+
+.top_banner{
+    height: 40px;
+    width: 100%;
+    background-color: #304f68;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+}
+.zs {
+    margin:50px auto;
+    height: 1256px;
+    width:884px;
+    background: url('../images/ipadbg.png') no-repeat;
+}
+.zs_inner{
+    height: 1040px;
+    width: 780px;
+    margin-top:110px;
+    margin-left:53px;
+    border-radius: 5px;
+    border:1px solid #ddd;
+
+}
+iframe{
+    padding-bottom: 0px!important;
+}

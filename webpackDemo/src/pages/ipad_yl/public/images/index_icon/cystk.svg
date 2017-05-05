@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="16px" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>常用试题库</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="12.135785" height="15.5915033"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="12.135785" height="15.5915033" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="默认样式(图标全选中)" transform="translate(-1396.000000, -408.000000)">
+            <g id="常用试题库" transform="translate(1397.000000, 408.000000)">
+                <use id="Rectangle-19" stroke="#596B86" mask="url(#mask-2)" stroke-width="2.44363636" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <path d="M0,2.34220355 L2.427157,2.34220355" id="Line" stroke="#596B86" stroke-width="1.22181818" stroke-linecap="square"></path>
+                <path d="M0,4.62791783 L2.427157,4.62791783" id="Line-Copy-8" stroke="#596B86" stroke-width="1.22181818" stroke-linecap="square"></path>
+                <path d="M0,6.91363212 L2.427157,6.91363212" id="Line-Copy-9" stroke="#596B86" stroke-width="1.22181818" stroke-linecap="square"></path>
+                <path d="M3.59702558,9.62995746 L3.59702558,10.740257 L9.81763517,10.740257 L9.81763517,9.62995746 C9.81763517,8.59341134 7.74454294,8.07491614 6.70755252,8.07491614 C5.67100641,8.07491614 3.59702558,8.59341134 3.59702558,9.62995746 Z M6.70755252,4.52009167 C5.97179583,4.52009167 5.37465996,5.11767184 5.37465996,5.85342853 C5.37465996,6.58918523 5.97179583,7.18632109 6.70755252,7.18632109 C7.44375351,7.18632109 8.03644641,6.58918523 8.03644641,5.85342853 C8.03644641,5.11767184 7.44375351,4.52009167 6.70755252,4.52009167" id="Fill-8" stroke="#304568" stroke-width="0.581818182" fill="#304568"></path>
+            </g>
+        </g>
+    </g>
+</svg>

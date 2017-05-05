@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>表单预览</title>
+    <link rel="stylesheet" href="css/bootstrap.css"> 
+    <link rel="stylesheet" href="css/layout.css"/>
+    <link rel="stylesheet" href="css/jquery-labelauty.css"/>
+    <link rel="stylesheet" href="css/ipad_fb.css"/>
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/jquery-labelauty.js"></script>
+    <script src="js/hostIp.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/knockout.js"></script>
+    <script src="../js/surveyeditor.js"></script>
+    <script src="../js/browser.min.js"></script>
+    <script src="../js/survey.ko.js"></script>
+</head>
+<body>
+	<div id="mySurveyJSName">
+	
+	</div>	
+</body>
+  <script type="application/javascript">
+     Survey.Survey.cssType = "boostrap";
+      var survey = new Survey.Survey({
+    	  pages: [
+    	          {
+    	           name: "试卷1",
+    	           questions: [
+    	            {
+    	             type: "hasnotradiogroup",
+    	             choices: [
+    	              {
+    	               value: "0",
+    	               text: "有",
+    	               score: "0",
+    	               isTk: false,
+    	               tkText: null
+    	              },
+    	              {
+    	               value: "1",
+    	               text: "无",
+    	               score: "0",
+    	               isTk: false,
+    	               tkText: null
+    	              }
+    	             ],
+    	             name: "新建问题1",
+    	             promptMessage: "这才是人生难预料"
+    	            },
+    	            {
+    	             type: "hasnotradiogroup",
+    	             choices: [
+    	              {
+    	               value: "0",
+    	               text: "有",
+    	               score: "0",
+    	               isTk: false,
+    	               tkText: null
+    	              },
+    	              {
+    	               value: "1",
+    	               text: "无",
+    	               score: "0",
+    	               isTk: false,
+    	               tkText: null
+    	              }
+    	             ],
+    	             name: "新建问题2",
+    	             promptMessage: "这是人生难预料"
+    	            },
+    	            {
+    	             type: "dropdown",
+    	             choices: [
+    	              {
+    	               value: "one",
+    	               text: "one value",
+    	               score: "0",
+    	               isTk: false,
+    	               tkText: null
+    	              },
+    	              {
+    	               value: "two",
+    	               text: "second value",
+    	               score: "0",
+    	               isTk: false,
+    	               tkText: null
+    	              },
+    	              {
+    	               value: "three",
+    	               text: "third value",
+    	               score: "0",
+    	               isTk: false,
+    	               tkText: null
+    	              }
+    	             ],
+    	             name: "新建问题3",
+    	             promptMessage: "回首繁华如梦秒"
+    	            },
+    	            {
+    	             type: "hasnotradiogroup",
+    	             choices: [
+    	              {
+    	               value: "0",
+    	               text: "有",
+    	               score: "0",
+    	               isTk: false,
+    	               tkText: null
+    	              },
+    	              {
+    	               value: "1",
+    	               text: "无",
+    	               score: "0",
+    	               isTk: false,
+    	               tkText: null
+    	              }
+    	             ],
+    	             name: "新建问题4",
+    	             promptMessage: "种富得富如此报"
+    	            },
+    	            {
+    	             type: "radiogroup",
+    	             choices: [
+    	              {
+    	               value: "one",
+    	               text: "one value",
+    	               score: "0",
+    	               isTk: false,
+    	               tkText: null
+    	              },
+    	              {
+    	               value: "two",
+    	               text: "second value",
+    	               score: "0",
+    	               isTk: false,
+    	               tkText: null
+    	              },
+    	              {
+    	               value: "three",
+    	               text: "third value",
+    	               score: "0",
+    	               isTk: false,
+    	               tkText: null
+    	              }
+    	             ],
+    	             name: "新建问题5",
+    	             promptMessage: "赠木桃"
+    	            },
+    	            {
+    	             type: "whetherradiogroup",
+    	             choices: [
+    	              {
+    	               value: "0",
+    	               text: "是",
+    	               score: "0",
+    	               isTk: false,
+    	               tkText: null
+    	              },
+    	              {
+    	               value: "1",
+    	               text: "否",
+    	               score: "0",
+    	               isTk: false,
+    	               tkText: null
+    	              }
+    	             ],
+    	             name: "新建问题6",
+    	             promptMessage: "O(∩_∩)O哈哈哈~"
+    	            },
+    	            {
+    	             type: "text",
+    	             name: "新建问题7",
+    	             promptMessage: "嘻嘻嘻"
+    	            },
+    	            {
+    	             type: "radiogroup",
+    	             choices: [
+    	              {
+    	               value: "one",
+    	               text: "one value",
+    	               score: "0",
+    	               isTk: false,
+    	               tkText: null
+    	              },
+    	              {
+    	               value: "two",
+    	               text: "second value",
+    	               score: "0",
+    	               isTk: false,
+    	               tkText: null
+    	              },
+    	              {
+    	               value: "three",
+    	               text: "third value",
+    	               score: "0",
+    	               isTk: false,
+    	               tkText: null
+    	              }
+    	             ],
+    	             name: "新建问题8",
+    	             promptMessage: "呼呼哈嘿"
+    	            },
+    	            {
+    	             type: "hr",
+    	             name: "分割线1"
+    	            }
+    	           ]
+    	          }
+    	         ]
+    	        });
+				     
+				survey.render("mySurveyJSName");
+     		
+     		
+    </script>
+<script>
+/*window.onload = function(){
+	// $(":input[type='checkbox']").labelauty();
+	// $(":input[type='radio']").labelauty();
+	//var l = $(".sv_q_checkbox")
+	//console.log(l.length);
+/* 	for(var i = 0;i<l.length;i++){
+		l[i].children("input[type='checkbox']").attr("data-labelauty",l[i].children("span").html());
+	} */
+	//$(".sv_q_checkbox input[type='checkbox']").attr("data-labelauty",$(".sv_q_checkbox").children("span").html());
+	
+	
+/*  	var fuc = {};
+	fuc.arrChRa = function(ys){
+		var arrCheckbox = $("."+ys+" input");
+		var arrSpan = $("."+ys).children("span");
+		
+		for(var i = 0 ; i < arrCheckbox.length; i++ ){
+			$(arrCheckbox[i]).attr("data-labelauty",$(arrSpan[i]).html());
+			$(arrSpan[i]).hide();
+		}
+	}
+	fuc.arrChRa("sv_q_checkbox");
+	fuc.arrChRa("sv_q_radiogroup");  */
+/* 	setTimeout(function(){
+		 $(":input[type='checkbox']").labelauty();
+		 $(":input[type='radio']").labelauty();
+	},30); */ 
+	//  $(":input[type='checkbox']").labelauty();
+	// $(":input[type='radio']").labelauty(); 
+//}
+  $(function(){
+	  var arrCheckbox = $(".sv_q_checkbox input[type='checkbox']");
+		var arrSpan = $(".sv_q_checkbox").children("span");
+		
+		for(var i = 0 ; i < arrCheckbox.length; i++ ){
+			$(arrCheckbox[i]).attr("data-labelauty",$(arrSpan[i]).html());
+			$(arrSpan[i]).hide();
+		} 
+	 	var arrCheckbox = $(".sv_q_radiogroup input[type='radio']");
+		var arrSpan = $(".sv_q_radiogroup").children("span");
+		
+		for(var i = 0 ; i < arrCheckbox.length; i++ ){
+			$(arrCheckbox[i]).attr("data-labelauty",$(arrSpan[i]).html());
+			$(arrSpan[i]).hide();	
+		}  
+  }) 
+  
+  window.onload = function(){
+	  setTimeout(function(){
+			 $(":input[type='checkbox']").labelauty();
+			 $(":input[type='radio']").labelauty();
+		},50);
+  } 
+</script>
+
+</html>

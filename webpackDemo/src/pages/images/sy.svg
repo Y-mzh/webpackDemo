@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="13px" viewBox="0 0 10 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M125.268077,102.687194 L126.382182,102.687194 C126.925871,102.687194 127.156233,102.293982 126.887634,101.808931 L122.973555,94.7406688 C122.431105,93.7610819 121.564776,93.7701458 121.027345,94.7406688 L117.113266,101.808931 C116.844228,102.294775 117.070965,102.687194 117.618717,102.687194 L118.858901,102.687194 L118.795593,105.994014 C118.784912,106.551944 119.227423,107 119.78387,107 L124.217029,107 C124.781352,107 125.229109,106.549605 125.234715,105.994014 L125.268077,102.687194 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="10" height="13" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="设置界面" transform="translate(-1233.000000, -293.000000)" stroke="#979797" stroke-width="2">
+            <g id="Group-4" transform="translate(1116.000000, 199.000000)">
+                <use id="上移箭头" mask="url(#mask-2)" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

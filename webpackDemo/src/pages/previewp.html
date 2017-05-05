@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ipad预览界面</title>
+    <link rel="stylesheet" href="css/ipad.css"/>
+    <script src="js/knockout.js"></script>
+    <script src="js/survey.ko.js"></script>
+</head>
+<body>
+<div class="header_top">
+    <div class="header_left fl" onClick="fh();">
+        <img src="images/CombinedShape.svg">
+        <span class="header_left_title">泰康表单系统</span>
+    </div>
+    <div class="header_right fr">
+        <img src="images/Oval.png">
+    </div>
+</div>
+<div class="top_banner">PC端预览
+ <div class="exit_pc" onClick="fhpad();">
+  <img src="images/index_icon/fbIcon.svg" alt=""/>移动端
+ </div>
+ <div class="exit_" onClick="fh();">
+  <img src="images/index_icon/fbIcon.svg" alt=""/>退出
+ </div>
+</div>
+<div class="pcdyl">
+    <iframe class="pcdyl_inner" src="previewPc.html" frameborder="0"></iframe>
+</div>
+
+<script>
+var fh = function(){
+	window.location.href = "main.html"
+}
+var fhpad = function(){
+	window.location.href = "previewMobile.html"
+} 
+</script>
+</body>
+</html>

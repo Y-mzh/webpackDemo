@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>多选</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="15.5742574" height="15.5915033"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="15.5742574" height="15.5915033" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="默认样式1" transform="translate(-1396.000000, -121.000000)">
+            <g id="多选" transform="translate(1396.000000, 121.000000)">
+                <use id="Rectangle-11" stroke="#577186" mask="url(#mask-2)" stroke-width="2.4" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <polyline id="Path-2" stroke="#304D68" stroke-width="1.32" points="3.95346529 9.12103138 7.0683309 11.2738563 11.6207921 4.31764694"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

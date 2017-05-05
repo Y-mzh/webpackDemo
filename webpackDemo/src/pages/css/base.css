@@ -1,0 +1,498 @@
+/*css 初始化开始 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;  /*ȥ��ԭ��ʽ�е�С�ڵ�*/
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "����";
+}
+
+select, input {
+    vertical-align: middle;/*�����־�����ʾ*/
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none; /*��ֹ�϶�*/
+}
+
+img {
+    border: 0;
+    vertical-align: middle; /*  ȥ��ͼƬ�ײ�Ĭ�ϵ�3���ؿհ׷�϶*/
+}
+
+table {
+    border-collapse: collapse; /*�ϲ������*/
+}
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53"; /*unitedCode��д���������д��*/
+    color: #666; /*150%���ڵ�ǰ����ߴ�İٷֱ��м��*/
+    background: #fff;
+}
+
+.clearfix:before, .clearfix:after {
+    /*清除浮动*/
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/  /*����IE6�µ�д��*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+a:hover {
+    color: #C81623;
+    text-decoration: none;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;/*ȥ��ԭ�е���ʽ*/
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {  /*һ����װ������*/
+    font-style: normal;/*����������������*/
+    text-decoration: none;/*ȥ���л���*/
+}
+
+.col-red {
+    color: #C81623 !important;/*������ɫ��*/
+}
+
+/*公共类*/
+.w {
+    /*���� ��ȡ */
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.al {
+    text-align: left;
+}
+
+.ac {
+    text-align: center;
+}
+
+.ar {
+    text-align: right;
+}
+
+.hide {
+    display: none;
+}
+.fixed{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index:100;
+}
+
+/*css初始化结束*/
+
+/*顶部部分开始*/
+body{
+    background: #E8F1F5;
+}
+.header{
+    background: #FFFFFF;
+    height:48px;
+}
+.header_left{
+    padding:13px 0 0 44px;
+}
+.header_left_title{
+    font-family: microsoft yahei;
+    font-size: 18px;
+    color: #798C99;
+    margin-left:12px;
+    vertical-align: middle;
+}
+.header_right>img{
+    margin:5px 80px 0 0;
+    width:36px;
+    height:36px;
+}
+
+/*顶部部分结束*/
+
+/*信息部分开始*/
+.msg{
+    background: #304F68;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
+    height:48px;
+    line-height: 48px;
+    padding-left: 80px;
+}
+.msg>.msg_info{
+    font-family: microsoft yahei;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+/*信息部分结束*/
+
+/*主要内容部分开始*/
+.main{
+	width: 1464px;
+    margin: 0 auto;
+    padding-top:20px;
+}
+.main_nav>.main_nav_left>select:nth-child(1){
+	margin:0 25px 0 14px;
+}
+.main_nav>.main_nav_left>select{
+    font-family: microsoft yahei;
+    font-size: 16px;
+    color: #495F6F;
+    border:none;
+    background-color: #E8F1F5;
+}
+.main_nav>.main_nav_right{
+    margin-left: 858px;
+    position: relative;
+}
+.main_nav>.main_nav_right>input{
+    width:412px;
+    height: 30px;
+    padding-left:10px;
+    font-family: microsoft yahei;
+    font-size: 16px;
+    color: rgba(43,94,131,0.36);
+    background: #FFFFFF;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 0 2px 0 rgba(0,0,0,0.24);
+    border-radius: 2px;
+}
+.main_nav>.main_nav_right>img{
+    position: absolute;
+    top: 7px;
+    right: 10px;
+}
+.triangle-topright{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height:0;
+    border-top:50px solid #1FBE84;
+    border-left:58px solid transparent;
+}
+.pg{
+    border-top:50px solid #1FBE84;
+}
+.bd{
+    border-top:50px solid #A48AD4;
+}
+.triangle-topright>span{
+    position: absolute;
+    z-index: 2;
+    top: -44px;
+    right: 4px;
+    font-family:microsoft yahei;
+    font-size: 12px;
+    color: #FFFFFF;
+    width: 36px;
+    text-align: right;
+}
+.main>.main_content>ul>li{
+    background: #FFFFFF;
+    border: 1px solid rgba(43,95,131,0.36);
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
+    float:left;
+    width:276px;
+    height:180px;
+    margin:14px 8px;
+    box-sizing: border-box;
+}
+.main>.main_content>ul>li>.ih-item>a>.bloTop{
+    width: 100%;
+    height:100%;
+}
+.main>.main_content>ul>li>.ih-item>a>.bloTop>div>p{
+    margin-left:24px;
+}
+.main>.main_content>ul>li>.ih-item>a>.bloTop>.evanameContainer>div.bloTop_name{
+	margin-left:20px;
+    margin-top:8px;
+    font-family:microsoft yahei;
+    font-size: 18px;
+    color: #495F6F;
+    font-weight: bold;
+    width: 210px;
+    max-height:52px;
+    line-height:26px;
+    overflow: hidden;
+    padding-left:4px;
+}
+.main>.main_content>ul>li>.ih-item>a>.bloTop>.evanameContainer{
+	height:59px;
+	margin-top:20px;
+}
+.bloTop_name_focus{
+    outline: 0;
+	border:1px solid #66afe9;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+
+.main>.main_content>ul>li>.ih-item>a>.bloTop>div>p.bloTop_version{
+    text-align: right;
+    font-family: microsoft yahei;
+    font-size: 13px;
+    color: rgba(47,79,104,0.60);
+    padding-right: 10px;
+    margin-top:9px;
+}
+.main>.main_content>ul>li>.ih-item>a>.bloTop>div>p.bloTop_version>span:nth-child(1){
+	color:#379AFF;
+	display: inline-block;
+    width: 22px;
+}
+.main>.main_content>ul>li>.ih-item>a>.bloTop>div>p.bloTop_version>span:nth-child(2){
+	width: 52px;
+    display: inline-block;
+}
+.main>.main_content>ul>li>.ih-item>a>.bloTop>div>p.bloTop_versioned{
+    text-align: right;
+    font-family: microsoft yahei;
+    font-size: 13px;
+    color: rgba(47,79,104,0.60);
+    padding-right: 10px;
+    margin-top:4px;
+}
+.main>.main_content>ul>li>.ih-item>a>.bloTop>div>p.bloTop_versioned>span:nth-child(1){
+	color:#379AFF;
+	display: inline-block;
+    width: 22px;
+}
+.main>.main_content>ul>li>.ih-item>a>.bloTop>div>p.bloTop_versioned>span:nth-child(2){
+	width: 52px;
+    display: inline-block;
+}
+.main>.main_content>ul>li>.ih-item>a>.bloTop>div.bloTop_state{
+    height: 40px;
+    margin-top: 9px;
+    font-family: microsoft yahei;
+    font-size: 13px;
+    color: rgba(47,79,104,0.60);
+    text-align: right;
+    padding-right: 10px;
+    line-height: 40px;
+    border-top: 1px solid #ccc;
+}
+.main>.main_content>ul>li:hover{
+    background: #FFFFFF;
+    border: 1px solid #379AFF;
+    /* box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24); */
+    box-shadow:none;
+    border-radius: 2px;
+}
+.main>.main_content>ul>li li:hover:nth-child(1){
+	background:url("../images/edithover.svg");
+}
+.main>.main_content>ul>li li:hover:nth-child(2){
+	background:url("../images/copyhover.svg");
+}
+.main>.main_content>ul>li li:hover:nth-child(3){
+	background:url("../images/deletehover.svg");
+}
+.main>.main_content>ul>li li:hover:nth-child(4){
+	background:url("../images/publishhover.svg");
+}
+.main>.main_content>ul>li li:hover:nth-child(5){
+	background:url("../images/updatehover.svg");
+}
+#xinjianFirst{
+	background: #FFFFFF;
+    border: 1px solid rgba(43,95,131,0.36);
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
+    float: left;
+    width: 276px;
+    height: 180px;
+    margin: 14px 8px;
+    box-sizing: border-box;
+}
+#xinjianpg{
+	font-family: microsoft yahei;
+	font-size: 28px;
+	color: #495F6F;
+	cursor:pointer;
+	text-align: center;
+    margin-top: 75px;
+}
+#xinjianpg>img{
+	width:30px;
+	height:30px;
+	vertical-align: sub;
+	margin-right: 20px;
+}
+.info>ul>li{
+    float: left;
+    margin:10px 14px;
+}
+.info>ul>li:nth-child(1){
+    width: 21px;
+    height: 22px;
+    background:url("../images/edit.svg");
+}
+.info>ul>li:nth-child(2){
+    width: 19px;
+    height: 22px;
+    background:url("../images/copy.svg");
+}
+.info>ul>li:nth-child(3){
+    width: 20px;
+    height: 23px;
+    background:url("../images/delete.svg");
+}
+.info>ul>li:nth-child(4){
+    margin-top: 14px;
+    width: 21px;
+    height: 17px;
+    background:url("../images/fabu.svg");
+}
+.info>ul>li:nth-child(5){
+    margin-top: 12px;
+    width: 20px;
+    height: 22px;
+    background:url("../images/update_icon.svg");
+}
+/*主要内容部分结束*/
+
+/*新建评估模态框部分开始*/
+#newEvaluate>.newEvaluate_dialog>.newEvaluate_content{
+    width:342px;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    border-radius: 0;
+}
+#newEvaluate>.newEvaluate_dialog>.newEvaluate_content>.modal-header{
+    height: 36px;
+    background: #F3F4F5;
+    padding: 7px 15px;
+    border-bottom: none;
+}
+#newEvaluate>.newEvaluate_dialog>.newEvaluate_content>.modal-header>h4{
+    font-family: "microsoft yahei";
+    font-size: 16px;
+    color: #495F6F;
+    font-weight: bold;
+}
+#createEva>.modal-body{
+    padding:16px 38px 0 38px;
+}
+#createEva>.modal-body>.form-group{
+    margin-bottom: 12px;
+}
+#createEva>.modal-body>.form-group>label{
+    font-family: "microsoft yahei";
+    font-size: 13px;
+    color: rgba(72,94,110,0.80);
+    font-weight: normal;
+    vertical-align: middle;
+    margin-bottom:0;
+}
+#createEva>.modal-body>.form-group>input[type="text"]{
+    width: 198px;
+    height: 30px;
+    margin-top: 4px;
+    border: 1px solid rgba(43,95,131,0.36);
+    padding-left:8px;
+    margin-left: 10px;
+}
+#createEva>.modal-body>.form-group>select{
+    width: 100px;
+    height: 22px;
+    border: 1px solid rgba(43,95,131,0.36);
+    margin-left: 10px;
+    margin-right:14px;
+    -webkit-appearance: none;
+    padding-left: 5px;
+    background:#FFFFFF url("../images/arrow.png") no-repeat scroll right center ;
+}
+#createEva>.modal-body>.form-group>#evaType{
+	width:158px;
+	height:30px;
+	margin-top: 4px;
+}
+#createEva>.modal-body>.form-group>input[type="checkbox"]{
+    background: #FFFFFF;
+    border: 1px solid #B2C5D3;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    vertical-align: text-top;
+    margin-top:0;
+}
+#createEva>.modal-body>.form-group>button{
+    border:none;
+}
+#createEva>.modal-body>.form-group>button:nth-child(1){
+    width: 80px;
+    height: 30px;
+    background: #1FBE84;
+    border-radius: 2px;
+    font-family: "microsoft yahei";
+    font-size: 13px;
+    color: #FFFFFF;
+}
+#evabtn.disabled{
+	background-color:#ccc !important;
+}
+#createEva>.modal-body>.form-group>button:nth-child(2){
+    font-family: "microsoft yahei";
+    font-size: 13px;
+    color: rgba(72,94,110,0.80);
+    background: #fff;
+    margin-left: 12px;
+}
+#bttsf{
+    color: red;
+}
+input:-webkit-autofill{
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+/*新建评估模态框部分结束*/

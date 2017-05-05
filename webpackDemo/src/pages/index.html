@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>新建评估、表单</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/ihover.css"/>
+    <link rel="stylesheet" href="css/winpop.css"/>
+    
+</head>
+<body>
+<div class="header">
+    <div class="header_left fl">
+        <img src="images/CombinedShape.svg">
+        <span class="header_left_title">泰康表单系统</span>
+    </div>
+    <div class="header_right fr">
+        <img src="images/Oval.png">
+    </div>
+</div>
+<div class="msg">
+    <span class="msg_info">新建</span>
+</div>
+<div class="main">
+    <div class="main_nav clearfix">
+        <div class="main_nav_left fl">
+            <select name="">
+                <option selected="selected">全部</option>
+            </select>
+            <select name="">
+                <option selected="selected">从新到旧</option>
+            </select>
+        </div>
+        <div class="main_nav_right fl">
+            <input type="text" placeholder="输入标题搜索"/>
+            <img src="images/fangdajing.png">
+        </div>
+    </div>
+    <div class="main_content clearfix">
+        <div id="xinjianFirst" class="ih-item square effect3 bottom_to_top">
+	        <p data-toggle="modal" id="xinjianpg"><img src="images/new.svg">新增</p>            
+        </div>
+        <ul class="clearfix" id="xjEva"></ul>
+    </div>
+</div>
+<!--新建评估弹出框-->
+<div class="modal fade" id="newEvaluate" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog newEvaluate_dialog">
+        <div class="modal-content newEvaluate_content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" style="font-size: 28px;font-weight: normal;">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">新增评估</h4>
+            </div>
+            <form name="createEvaluate" id="createEva">
+                <div class="modal-body">
+                	<div class="form-group" style="margin-bottom:14px;">
+                        <label for="">评估类型</label>
+                        <select id="evaType">
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom:14px;">
+                        <label for="">评估名称</label>                       
+                        <input id="evaName" type="text">
+                        <span class="nameTips col-red ac"><p></p></span>
+                    </div>
+                    <div class="form-group">
+                    	<label>试卷编号</label>
+                        <select class="evasjbh">
+                            <option selected="selected">1.2.3.4.</option>                           
+                            <option>a.b.c.d.</option>
+                            <option>A.B.C.D.</option>
+                        </select>
+                        <input type="checkbox" class="evafjbh">
+                        <label for="" style="margin: 0 12px 0 0">分卷标号</label>                        
+                    </div>
+                    <div class="form-group">
+                        <label for="">试题编号</label>
+                        <select class="evastbh">                            
+                            <option selected="selected">1.2.3.4.</option>                           
+                            <option>a.b.c.d.</option>
+                            <option>A.B.C.D.</option>
+                        </select>                       
+                    </div>
+                    <div class="form-group">
+                        <label for="">选项编号</label>
+                        <select class="evaxxbh">
+                            <option selected="selected">1.2.3.4.</option>                            
+                            <option>a.b.c.d.</option>
+                            <option>A.B.C.D.</option>
+                        </select>
+                    </div>                   
+                    <div class="form-group">
+                        <label for="">必填提示</label>
+                        <select id="bttsf">
+                            <option selected="selected">*
+                            </option>                           
+                        </select>                      
+                    </div>                                        
+                    <div class="form-group" style="text-align: center;margin-top:20px;margin-bottom:20px;">
+                        <button type="button" class="btn btn-primary" id="evabtn">创建评估</button>
+                        <button type="button" class="btn" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+</body>
+<!--模板引擎-->
+<script type="text/template" id="template_xjpg">
+    <%_.each(model,function(item,i){%>
+    <li>
+        <div class="ih-item square effect3 bottom_to_top">
+            <a href="javascript:void(0);" ondragstart="return false";>
+                <div class="bloTop">											
+                    	<div class="evanameContainer">
+							<div contenteditable="true" class="bloTop_name" id="<%= item.id %>" data-toggle="tooltip" data-placement="top" title="<%=item.name%>" onblur="evaBlur('<%= item.id %>');" onfocus="evaFocus('<%= item.id %>');" value="<%=item.name%>" onkeydown="evaformName('<%= item.id %>',event.keyCode)">
+                    			<%= item.name.length>22? item.name.substr(0,21)+"..." : item.name %>	
+							</div>							
+						</div>
+						<div>															
+                    		<p class="bloTop_version">最新版本:<span><%=item.newestVersion == null ? '无':item.newestVersion%></span><span><%=item.newestPublishStatus == null ? '无':item.newestPublishStatus %></span></p>
+                    		<p class="bloTop_versioned" onclick="evaformpreVer('<%= item.previousPublishId%>')">上一版本:<span><%=item.previousVersion == null ? '无':item.previousVersion%></span><span><%=item.previousPublishStatus == null ? '无':item.previousPublishStatus %></span></p>
+						</div>                    
+                    	<div class="bloTop_state"><%=item.type%></div>
+                </div>
+                <div class="info">
+                    <ul>
+                        <li onclick="evaformEdit('<%= item.id %>')"></li>
+                        <li onclick="evaformCopy('<%= item.id %>')"></li>
+                        <li class="<%= item.newestPublishStatus != '已发布'?'':'hide' %>" onclick="evaformDelete('<%= item.id %>')"></li>
+                        <li class="<%= item.newestPublishStatus != '已发布'?'':'hide' %>" onclick="evaformPublish('<%= item.id %>')"></li>
+						<li class="<%= item.newestPublishStatus == '已发布'?'':'hide' %>" onclick="evaformUpdate('<%= item.id %>')"></li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+    </li>
+    <%});%>
+</script>
+<!--官方JS-->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/hostIp.js"></script>
+<script src="js/underscore-min.js"></script>
+<script src="js/winpop.js"></script>
+<!--JS-->
+<script src="js/interfaceConfig.js"></script>
+<script src="js/newEva.js"></script>
+<script src="js/evaCss.js"></script>
+
+</html>

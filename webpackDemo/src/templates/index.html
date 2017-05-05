@@ -1,0 +1,168 @@
+﻿﻿﻿﻿
+<div class="svd_container" >
+    <ul class="navbar-default container-fluid nav nav-tabs svd_menu header">
+        <li style="float: left;color:white;font-size: 20px;font-family: '微软雅黑', serif;padding: 5px;"  id="surveyname"> </li>
+        <li style="float: left;color:white;font-size: 20px;font-family: '微软雅黑', serif;padding: 5px;"  id="surveypublishVersion"></li>
+
+        <li data-bind="visible: showEmbededSurveyTab, css: {active: koViewType() == 'embed'}"><a href="#"
+                                                                                                 data-bind="click:selectEmbedClick, text: $root.getLocString('ed.embedSurvey')"></a>
+        </li>
+        <!-- <li class="svd_actions" data-bind="visible: koIsShowDesigner">
+             <button type="button" class="btn btn-primary" data-bind="enable:undoRedo.koCanUndo, click: doUndoClick"><span data-bind="text: $root.getLocString('ed.undo')"></span></button>
+         </li>
+         <li class="svd_actions" data-bind="visible: koIsShowDesigner">
+             <button type="button" class="btn btn-primary" data-bind="enable:undoRedo.koCanRedo, click: doRedoClick"><span data-bind="text: $root.getLocString('ed.redo')"></span></button>
+         </li>-->
+        <li class="svd_actions" data-bind="visible: (koIsShowDesigner() && koShowOptions())">
+            <div class="btn-group inline">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false" data-bind="text: $root.getLocString('ed.options')">
+                    Options
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li data-bind="css: {active: koGenerateValidJSON}"><a href="#"
+                                                                          data-bind="click:generateValidJSONClick, text: $root.getLocString('ed.generateValidJSON')"></a>
+                    </li>
+
+                </ul>
+            </div>
+        </li>
+
+        <div class="button-group">
+            <ul id="BUTTONEXIT" style="display: none">
+                <li id="EXITPREVIEW" data-bind="css: {active: koViewType() == 'designer'},click:selectDesignerClick">
+                    <img src="images/index_icon/fbIcon.svg" alt=""/>退出
+                </li>
+            </ul>
+            <ul id="BUTTONGROUP" style="margin-right:'200px' ;  ">
+                <li data-bind="visible: showJSONEditorTab, css: {active: koViewType() == 'editor'}"
+                    style="width:100px;text-align:center;"><a href="#"
+                                                              data-bind="click:selectEditorClick, text: $root.getLocString('ed.jsonEditor')"
+                                                              style="color:#fff"></a></li>
+                <li data-bind="css: {active: koViewType() == 'designer'},click:selectDesignerClick"><img
+                        src="images/index_icon/setIcon.svg" style="margin: 6px 10px;" alt=""/>设置
+                </li>
+                <li id="PREVIEW" data-bind="visible: showTestSurveyTab,click:selectTestClick"><img
+                        src="images/index_icon/ylIcon.svg" style="margin: 8px 10px;" alt=""/>预览
+                </li>
+                <li data-bind="click:putPublishClick"><img src="images/index_icon/fbIcon.svg" alt=""/>发布</li>
+                <li data-bind="event:{click: function(el, e){$root.saveEditorClick(); }}"><img
+                        src="images/index_icon/fbIcon.svg" alt=""/>保存
+                </li>
+            </ul>
+        </div>
+
+        <!-- <li class="svd_actions" data-bind="visible: koViewType() == 'test'">
+             <div class="btn-group inline">
+                 <button type="button" id="surveyTestWidth" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                     <span data-bind="text: $root.getLocString('ed.testSurveyWidth') + ' ' + $root.koTestSurveyWidth()"></span>
+                     <span class="caret"></span>
+                 </button>
+                 <ul class="dropdown-menu" aria-labelledby="surveyTestWidth">
+                     <li><a href="#" data-bind="click: koTestSurveyWidth.bind($data, '100%')">100%</a></li>
+                     <li><a href="#" data-bind="click: koTestSurveyWidth.bind($data, '1200px')">1200px</a></li>
+                     <li><a href="#" data-bind="click: koTestSurveyWidth.bind($data, '1000px')">1000px</a></li>
+                     <li><a href="#" data-bind="click: koTestSurveyWidth.bind($data, '800px')">800px</a></li>
+                     <li><a href="#" data-bind="click: koTestSurveyWidth.bind($data, '600px')">600px</a></li>
+                     <li><a href="#" data-bind="click: koTestSurveyWidth.bind($data, '400px')">400px</a></li>
+                 </ul>
+             </div>
+         </li>-->
+        <ul id="PREVIEWGROUP" class="nav nav-tabs" style="display: none">
+            <li id="PCTAB" style="margin-right:500px; margin-top:10px; " class="active"><a id="PC" href="#1" style="background-color:  #DDDDDD; "
+                                                                                           data-toggle="tab">电脑端</a>
+            </li>
+            <!--  <li id="PADTAB" style="margin-top:10px;"><a id="PAD" href="#2" data-toggle="tab">移动端</a></li> -->
+            <li id="PADTAB" style="margin-top:10px;"><a id="PAD" onClick="ipadyl();">移动端</a></li>
+        </ul>
+        <li class="svd_actions">
+            <button type="button" class="btn btn-primary svd_save_btn"
+                    data-bind="click: saveButtonClick, visible: koShowSaveButton"><span
+                    data-bind="text: $root.getLocString('ed.saveSurvey')"></span></button>
+        </li>
+    </ul>
+    <div class="panel svd_content grid-c3">
+        <!-- ko if: koViewType() !== 'test' && koViewType() !=='editor'-->
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 panel panel-default svd_toolbox  col-extra flr">
+            <div id="crys_list" style="padding-right:2px">
+                <ul class="main">
+                    <!-- ko foreach: questionTypes -->
+                    <li style="text-align:left; margin:1px;width:100%" draggable="true"
+                        data-bind="click: $parent.clickQuestion, event:{dragstart: function(el, e) { $parent.draggingQuestion($data, e); return true;}, dragend: function(el, e) { $parent.dragEnd(); }}">
+                        <span data-bind="css: 'icon-' + $data"></span>
+                        <span class="svd_toolbox_item_text" data-bind="text: $root.getLocString('qt.' + $data)"></span>
+                    </li>
+                    <!-- /ko  -->
+                    <li style="text-align:left; margin:1px;width:100%" id="cystk">
+                        <span class="cystk"></span>
+                        <span class="svd_toolbox_item_text">常用试题库</span>
+                        <ul class="tccy" id="tccy">
+                            <li><span></span>姓名</li>
+                            <li><span></span>性别</li>
+                            <li><span></span>出生日期</li>
+                            <li><span></span>居住地址</li>
+                            <li><span></span>婚姻状况</li>
+                            <li><span></span>地址</li>
+                            <li><span></span>联系人姓名</li>
+                            <li><span></span>联系人手机</li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- ko foreach: koCopiedQuestions -->
+                <!--  <div class="btn btn-default" style="text-align:left; margin:1px;width:100%" draggable="true" data-bind="click: $parent.clickCopiedQuestion, event:{dragstart: function(el, e) { $parent.draggingCopiedQuestion($data, e); return true;}, dragend: function(el, e) { $parent.dragEnd(); }}">
+                      <span class="icon-default"></span>
+                      <span class="svd_toolbox_item_text" data-bind="text:name"></span>
+                  </div>-->
+                <!-- /ko  -->
+            </div>
+        </div>
+        <!-- /ko -->
+        <div class="row svd_survey_designer col-main" data-bind="visible: koViewType() == 'designer'">
+            <div class="col-lg-71 col-md-7 col-sm-12 col-xs-12 svd_editors main-wrap fll">
+                <div class="svd_pages_editor" data-bind="template: { name: 'pageeditor', data: pagesEditor }"></div>
+                <div class="svd_questions_editor" id="scrollableDiv">
+                    <div id="surveyjs"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 panel panel-default svd_properties right_proper">
+                <div class="panel-heading input-group">
+                    <div class="custom-select">
+                        <select class="form-control"
+                                data-bind="options: koObjects, optionsText: 'text', value: koSelectedObject"></select>
+                    </div>
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="button"
+                                data-bind="enable: koCanDeleteObject, click: deleteCurrentObject, attr: { title: $root.getLocString('ed.delSelObject')}">
+                            <span class="glyphicon glyphicon-remove"></span></button>
+                    </div>
+                </div>
+                <div data-bind="template: { name: 'objecteditor', data: selectedObjectEditor }"></div>
+                <div class="panel-footer" data-bind="visible:surveyVerbs.koHasVerbs">
+                    <div data-bind="template: { name: 'objectverbs', data: surveyVerbs }"></div>
+                </div>
+            </div>
+        </div>
+        <div data-bind="visible: koViewType() == 'editor'">
+            <div data-bind="template: { name: 'jsoneditor', data: jsonEditor }"></div>
+        </div>
+        <div id="surveyjsTest" class="pc " data-bind="visible: koViewType() == 'test'">
+            <div id="surveyjsExample"></div>
+            <div id="surveyjsExampleResults"></div>
+            <button id="surveyjsExamplereRun"
+                    data-bind="click:selectTestClick, text: $root.getLocString('ed.testSurveyAgain')"
+                    style="display:none">Test Again
+            </button>
+        </div>
+        <div id="surveyjsEmbed" data-bind="visible: koViewType() == 'embed'">
+            <div data-bind="template: { name: 'surveyembeding', data: surveyEmbeding }"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var ipadyl = function () {
+        window.location.href = '../src/pages/ipad_yl/index.html';
+    };
+
+</script>

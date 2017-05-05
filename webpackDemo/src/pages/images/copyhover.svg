@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="22px" viewBox="0 0 19 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>复制-hover</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="新版本" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="评估模版列表-焦点(鼠标滑动到按钮上颜色改变)-copy" transform="translate(-582.000000, -305.000000)" fill="#379AFF">
+            <g id="Group-11" transform="translate(524.000000, 156.000000)">
+                <path d="M75,169 L64,169 L64,155 L75,155 L75,169 Z M75,153 L64,153 C62.896,153 62,153.896 62,155 L62,169 C62,170.104 62.896,171 64,171 L75,171 C76.104,171 77,170.104 77,169 L77,155 C77,153.896 76.104,153 75,153 L75,153 Z M72,149 L60,149 C58.896,149 58,149.896 58,151 L58,165 L60,165 L60,151 L72,151 L72,149 Z" id="复制-hover"></path>
+            </g>
+        </g>
+    </g>
+</svg>

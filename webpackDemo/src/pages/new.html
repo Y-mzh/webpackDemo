@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>新建评估、表单</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/ihover.css"/>
+    <link rel="stylesheet" href="css/winpop.css"/>
+    
+</head>
+<body>
+<div class="header">
+    <div class="header_left fl">
+        <img src="images/CombinedShape.svg">
+        <span class="header_left_title">泰康表单系统</span>
+    </div>
+    <div class="header_right fr">
+        <img src="images/Oval.png">
+    </div>
+</div>
+<div class="msg">
+    <span class="msg_info">新建</span>
+</div>
+<div class="main">
+    <div class="main_nav clearfix">
+        <div class="main_nav_left fl">
+            <select name="">
+                <option selected="selected">全部</option>
+            </select>
+            <select name="">
+                <option selected="selected">从新到旧</option>
+            </select>
+        </div>
+        <div class="main_nav_right fl">
+            <input type="text" placeholder="输入标题搜索"/>
+            <img src="images/fangdajing.png">
+        </div>
+    </div>
+    <div class="main_content clearfix">
+        <div id="xinjianFirst" class="ih-item square effect3 bottom_to_top">
+            <a href="#"  class="btt_main">
+                <span id="xinjian" class="new"><img src="images/new.svg">新建</span>
+                <div class="info2">
+                    <p data-toggle="modal" id="xinjianpg">新增评估</p>
+                </div>
+                <div class="info1">
+                    <p>新增表单</p>
+                </div>
+            </a>
+        </div>
+        <ul class="clearfix" id="xjEva"></ul>
+    </div>
+</div>
+<!--新建评估弹出框-->
+<div class="modal fade" id="newEvaluate" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog newEvaluate_dialog">
+        <div class="modal-content newEvaluate_content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" style="font-size: 28px;font-weight: normal;">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">新增评估</h4>
+            </div>
+            <form name="createEvaluate" id="createEva">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="">评估名称</label><input id="evaName" type="text">
+                    </div>
+                    <div class="form-group nameTips col-red ac"><p></p></div>
+                    <div class="form-group">
+                        <label for="">必填提示字符</label>
+                        <select id="bttsf">
+                            <option selected="selected">*
+                            </option>
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+                        <label for="" style="margin-left: 54px;">试卷编号</label>
+                        <select class="evasjbh">
+                            <option selected="selected">1.2.3.4.</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">试题编号</label>
+                        <select style="margin: 0 54px 0 38px;" class="evastbh">
+                            <option selected="selected">A.B.C.D.</option>
+                        </select>
+                        <label for="" style="margin: 0 12px 0 0">分卷标号</label>
+                        <input type="checkbox">
+                    </div>
+                    <div class="form-group">
+                        <label for="">选项编号</label>
+                        <select style="margin-left:38px;" class="evaxxbh">
+                            <option selected="selected">A.B.C.D.</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="text-align: center">
+                        <button type="button" class="btn btn-primary" id="evabtn">创建评估</button>
+                        <button type="button" class="btn" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+</body>
+<!--模板引擎-->
+<script type="text/template" id="template_xjpg">
+    <%_.each(model,function(item,i){%>
+    <li>
+        <div class="ih-item square effect3 bottom_to_top">
+            <a href="#">
+                <div class="bloTop">
+					<div onclick="evaformEdit('<%= item.id %>')">
+						<div class="triangle-topright <%=item.type=='表单'?'bd':'pg'%>"><span><%=item.type%></span></div>
+                    	<p class="bloTop_name"><%=item.name%></p>
+                    	<p class="bloTop_time"><%=item.showDate%></p>
+                    	<p class="bloTop_version">最新版本&nbsp;<%=item.newestVersion == null ? '无':item.newestVersion%></p>
+                    	<p class="bloTop_versioned">已发布版本&nbsp;<%=item.newestVersion == null ? '无':item.publishVersion%></p>
+					</div>
+                    
+                    <div class="bloTop_state"><%=item.status == 1 ? '未发布':'发布'%></div>
+                </div>
+                <div class="info">
+                    <ul>
+                        <li onclick="evaformEdit('<%= item.id %>')"></li>
+                        <li onclick="evaformCopy('<%= item.id %>')"></li>
+                        <li class="<%= item.status==0?'hide':'' %>" onclick="evaformDelete('<%= item.id %>')"></li>
+                        <li class="<%= item.status==0?'hide':'' %>" onclick="evaformPublish('<%= item.id %>','<%= item.status %>')"></li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+    </li>
+    <%});%>
+</script>
+<!--官方JS-->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/underscore-min.js"></script>
+<script src="js/winpop.js"></script>
+<!--JS-->
+<script src="js/newEva.js"></script>
+<script src="js/evaCss.js"></script>
+
+</html>

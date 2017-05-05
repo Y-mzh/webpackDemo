@@ -1,0 +1,97 @@
+*{margin:0;padding:0;}
+
+.header_top{
+    background: #FFFFFF;
+    height:48px;
+}
+.header_left{
+    padding:13px 0 0 44px;
+    float:left;
+    cursor:pointer;
+}
+.header_left_title{
+    font-family: microsoft yahei;
+    font-size: 18px;
+    color: #798C99;
+    margin-left:12px;
+    vertical-align: top;
+}
+.header_right>img{
+    margin:5px 80px 0 0;
+    width:36px;
+    height:36px;
+    float:right;
+}
+
+
+.top_banner{
+    height: 40px;
+    width: 100%;
+    background-color: #304f68;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    position:relative;
+}
+.zs {
+    margin:50px auto;
+    height: 1256px;
+    width:884px;
+    background: url('../images/ipadbg.png') no-repeat;
+}
+.zs_inner{
+    height: 1040px;
+    width: 780px;
+    margin-top:110px;
+    margin-left:53px;
+    border-radius: 5px;
+    border:1px solid #ddd;
+
+}
+iframe{
+    padding-bottom: 0px!important;
+}
+.exit_{display: inline-block;
+    line-height: 30px;
+    width: 68px;
+    height: 28px;
+    border-radius: 1px;
+    border: 1px solid #fff;
+    margin-left: 16px;
+    cursor: pointer;
+    color: #fff;
+    position:absolute;
+    right:100px;
+    top:6px;
+    }
+.exit_ img{
+	float: left;
+    margin: 6px 10px;
+} 
+.exit_pc{display: inline-block;
+    line-height: 30px;
+    width: 68px;
+    height: 28px;
+    border-radius: 1px;
+    border: 1px solid #fff;
+    margin-left: 16px;
+    cursor: pointer;
+    color: #fff;
+    position:absolute;
+    right:10px;
+    top:6px;
+    }
+.exit_ img{
+	float: left;
+    margin: 6px 10px;
+} 
+
+/*pc端预�?*/
+.pcdyl{margin:10px auto;height:90%;width:1000px;}
+.pcdyl_inner{
+	 height: 1040px;
+    width: 900px;
+	margin:0 auto;
+    border-radius: 5px;
+    border:1px solid #ddd;
+}

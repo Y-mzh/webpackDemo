@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>表单制作页面</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/layout.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/preview.css"/>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- <script src="../js/react.min.js"></script>
+     <script src="../js/react-dom.min.js"></script>-->
+    <script src="js/EventBus-3.0.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/hostIp.js"></script>
+    <script src="js/knockout.js"></script>
+    <script src="js/survey.ko.js"></script>
+    <script src="js/surveyeditor.js"></script>
+
+    <script src="js/reflux.js"></script>
+    <script src="js/browser.min.js"></script>
+    <!-- <script src="../question_inves/actions/questionActions.js"></script>
+     <script src="../question_inves/stores/questionStores.js"></script>
+     <script type="text/babel" src="../question_inves/components/questionView.js"></script>-->
+
+
+</head>
+<body>
+<!--header-->
+<div class="header_top">
+    <div class="header_left fl" onClick="fh();">
+        <img src="images/CombinedShape.svg">
+        <span class="header_left_title">泰康表单系统</span>
+    </div>
+    <div class="header_right fr">
+        <img src="images/Oval.png">
+    </div>
+</div>
+<!--双飞翼布局-->
+<div id="body_sfy">
+    <div class="sfyBg" id="mainZone">
+        <div class="col-main">
+            <div>
+                <div class="formBjq" id="_formBjq">
+                    <!-- 中间编辑区域-->
+
+                    <!-- <div id="tab_qu"></div>-->
+                    <!--   tab内容 
+                       <div class="tab_con">
+                         <div class="title">
+                           <h1>这是标题</h1>
+                         </div>
+                          <div class="kjcon">
+                           <h3>下拉</h3>
+                            <ul class="xl">
+                             <li><input type="radio" name = "xl">选项一</li>
+                             <li><input type="radio" name = "xl">选项二</li>
+                            </ul>
+                          </div>
+                          <div class="kjcon">
+                           <h3>输入框</h3>
+
+                            <input type="text" name = "srk">
+
+                          </div>
+                          <div class="kjcon">
+                           <h3>是否单选</h3>
+                            <ul class="xl">
+                             <li><input type="radio" name = "xl">是</li>
+                             <li><input type="radio" name = "xl">否</li>
+                            </ul>
+                          </div>
+                          <div class="kjcon">
+                           <div class="title">
+                              <h3>分割线</h3>
+                           </div>
+                            <hr>
+                          </div>
+
+                          编辑状态下控件样式
+                          <div class="ed_kj">
+                           <select>
+                             <option>001</option>
+                             <option>002</option>
+                           </select>
+                           <h3>下拉</h3>
+                           <div class="bjkj">
+                            <div class="xl">
+                              <ul>
+                                <li><input type="text">分</li>
+                                <li><input type="checkbox">不计分</li>
+                                <li><input type="checkbox">允许填空</li>
+                                <li>删除占位</li>
+                              </ul>
+                              <span><input type="radio" name = "xl">选项一</span>
+                            </div>
+                           </div>
+                           <ul class="xxbj">
+                             <li>字典值域</li>
+                             <li class="fenge"></li>
+                             <li>使用公共选项</li>
+                             <li class="fenge"></li>
+                             <li>批量编辑</li>
+                           </ul>
+                            <div class="xxbj_">
+                              <ul class="chkbj_r">
+                               <li>上移占位</li>
+                               <li>下移占位</li>
+                               <li>复制占位</li>
+                               <li>删除占位</li>
+                              </ul>
+                              <ul class="chkbj">
+                               <li><input type="checkbox">必填</li>
+                               <li><input type="checkbox">添加其他</li>
+                               <li><input type="checkbox">横向显示选项</li>
+                               <li><input type="checkbox">添加到共用选项</li>
+                              </ul>
+                            </div>
+                          </div>
+                       </div>  -->
+                    <div id="surveyjseditor"></div>
+
+                </div>
+            </div>
+        </div>
+        <!--         <div class="col-sub">
+                    折叠菜单区域
+                </div>
+                <div class="col-extra"> -->
+
+        <!-- 插入元素区域-->
+        <!--             <div id="crys_list">
+                        <ul class="main">
+                            <li class="dx" data-bind="click:clickQuestion">单选</li>
+                            <li class="duox">多选</li>
+                            <li class="xl">下拉</li>
+                            <li class="srk">输入框</li>
+                            <li class="zswb">注释文本</li>
+                            <li class="sfdx">是否单选</li>
+                            <li class="ywdx">有无单选</li>
+                            <li class="rq">日期</li>
+                            <li class="fgx">分割线</li>
+                            <li class="cystk" id="cystk">常用试题库
+                                <ul class="tccy" id="tccy">
+                                    <li><span></span>姓名</li>
+                                    <li><span></span>性别</li>
+                                    <li><span></span>出生日期</li>
+                                    <li><span></span>居住地址</li>
+                                    <li><span></span>婚姻状况</li>
+                                    <li><span></span>地址</li>
+                                    <li><span></span>联系人姓名</li>
+                                    <li><span></span>联系人手机</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div> -->
+    </div>
+</div>
+</div>
+
+<!--双飞翼布局-->
+</body>
+<script>
+
+
+    window.onload = function(){
+        //$('.title_edit_a').flexText();
+        var body_hgt = document.documentElement.clientHeight - 40 +"px";//双飞翼布局
+        var _formBjq_hgt = document.documentElement.clientHeight - 60 +"px";//中间区域
+        var mainZone = document.getElementById("mainZone");
+        var _formBjq = document.getElementById("_formBjq");
+        mainZone.style.height = body_hgt;
+        _formBjq.style.height = _formBjq_hgt;
+
+        //列表hover事件
+        var cystk = document.getElementById("cystk");
+        var tccy = document.getElementById("tccy");
+        /* cystk.onmouseover = function(){
+         tccy.style.display = "block";
+         }
+         cystk.onmouseout = function(){
+         tccy.style.display = "none";
+         } */
+
+
+
+        $(document).on("click",".bzwh",function(){
+            $(this).parent().find(".tsmessage").fadeIn();
+        })
+        $(document).on("click",".gbts",function(){
+            $(this).parent().fadeOut();
+        })
+
+
+
+    }
+
+    //创建编辑器
+    var options = {};
+    var editor = new SurveyEditor.SurveyEditor("surveyjseditor", options);
+    //获取页面信息
+    var nextPageData = JSON.parse(sessionStorage.getItem("template"));
+    var surveyJson = {};
+    //evaFlag==1  最近版本编辑页面
+    //evaFlag==2  上一版本编辑页面
+    if(nextPageData.evaFlag == 1 || nextPageData.evaFlag == 2){
+        //新建无内容判断
+        if(nextPageData.content != null){
+            surveyJson['pages'] = nextPageData.content.pages;
+            //编辑器显示相应数据
+            editor.text = JSON.stringify(surveyJson);
+        }
+    }
+
+    var ui1 =document.getElementById("BUTTONGROUP");
+    var ui2 =document.getElementById("BUTTONEXIT");
+    var PREVIEWGROUP =document.getElementById("PREVIEWGROUP");
+    var PC =document.getElementById("PC");
+    var PAD =document.getElementById("PAD");
+    var PCTAB =document.getElementById("PCTAB");
+    var PADTAB =document.getElementById("PADTAB");
+    var survey =nextPageData.name;
+
+
+    $(document).ready(function () {
+        console.log(nextPageData);
+        console.log(nextPageData.name);
+        console.log(survey);
+        $("#surveyname").append(nextPageData.name);
+        $("#surveypublishVersion").append(nextPageData.publishVersion);
+
+        $("#PREVIEW").click(function () {
+        	window.location.href = "previewp.html";//点击预览进入pc预览界面
+			//误删！！！！！！！！
+        });
+
+    });
+
+</script>
+</html>

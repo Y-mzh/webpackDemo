@@ -1,0 +1,43 @@
+.pc{
+    width: 80% ;
+    height: 100% ;
+    font-family:"微软雅黑",serif;
+    margin-left: 10%;
+    background-color:  #FEFEFE ;
+    border:2px solid #C6CDD3;
+
+}
+.pad{
+    height: 1256px; 
+    width:884px;
+    font-family:"微软雅黑",serif;
+    margin-left: 15% ;
+    background-color:  #FEFEFE;
+    border:2px solid #C6CDD3 ;
+    overflow-y:scroll;
+    background:url("../images/ipadbg.png") no-repeat;
+    padding-top:110px;
+    padding-left:54px;
+}
+.tsmessage{display:none;width: 100%;height:36px;margin:15px 0;background-color:#c8f3ff;padding-left:20px;font-size: 20px;line-height: 20px;color:#363636;}
+.gbts{margin:8px 25px;display: block;height:20px;width:20px;background:url("../images/dele.png");background-size:cover;float: right;}
+.bzwh{position: absolute;height:21px;width:21px;right:20px;top:-3px;}
+.tsxx_{height:20px;width:90%;border:none;outline:none;background: none;margin-top:8px;font-size:16px;}
+  .form-inline{font-size:16px;}
+ .form-inline .checkbox {
+    display: inline-block;
+    margin-top: 2px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    height: 32px;
+}
+ .form-inline .radio {
+    display: inline-block;
+    margin-top: 2px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    height: 32px;
+}
+hr{margin:0;height:1px!important;}
+.hrtext{width:100%;font-size:16px;}
+.ipt_text{width:280px;} 

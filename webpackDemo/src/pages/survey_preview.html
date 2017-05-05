@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>问卷预览</title>
+    <link rel="stylesheet" href="css/layout.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/survey_preview.css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/hostIp.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/knockout.js"></script>
+    <script src="js/survey.ko.js"></script>
+    <script src="js/surveyeditor.js"></script>
+</head>
+<body>
+
+<!--header-->
+<div class="header" id="myTab" >
+    <div class="button-group">
+        <ul>
+            <li><img src="images/index_icon/ylIcon.svg" alt=""/>退出</li>
+        </ul>
+    </div>
+    <div style="margin-left: 40%">
+        <ul  class="nav nav-tabs" >
+            <li class="active"><a href="#1" data-toggle="tab">电脑端</a></li>
+            <li class="dropdown">
+                <a href="#" id="myTabDrop1" class="dropdown-toggle"
+                   data-toggle="dropdown">移动端
+                    <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                    <li><a href="#2" tabindex="-1" data-toggle="tab">1</a></li>
+                    <li><a href="#" tabindex="-1" data-toggle="tab">2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <span class="bj">编辑</span>
+    <div style="margin:0px auto;">
+        <span class="bj">电脑版</span>
+        <span class="bj"></span>
+    </div>
+</div>
+<!--header-->
+<div  id="myTabContent" class="tab-content" style=" position:absolute; left:0; top:40px; width:100%; height:100%; background:#EAF1F7;box-shadow:0 3px 5px #B3C4BE inset;">
+    <div id="1" class="tab-pane fade in active preview_page.PC" style="margin:20px auto;width: 80%;height: 80%;background:#FEFEFE;border:1px solid #C7CED4;">
+        <div>
+            <div >
+           <div id="surveyjseditor"></div>
+                <div>1</div>
+            </div>
+        </div>
+    </div>
+    <div id="2"  class="tab-pane fade preview_page.Modile"  style="margin:20px auto;width: 40%;height: 80%;background:#FEFEFE;border:1px solid #C7CED4;">
+        <div>
+            <div>
+2
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>表单预览</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/layout.css"/>
+    <link rel="stylesheet" href="css/jquery-labelauty.css"/>
+    <link rel="stylesheet" href="css/ipad_fb.css"/>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-labelauty.js"></script>
+    <script src="js/knockout.js"></script>
+    <script src="js/survey.ko.js"></script>
+</head>
+<body>
+<div id="mySurveyJSName">
+
+</div>
+</body>
+<script type="application/javascript">
+  
+  
+	
+    var getData = function(){
+    	  var wjId = JSON.parse(sessionStorage.getItem("template"));
+    	    console.log(wjId.id);
+    	var getId = wjId.id;
+    	var url_ = 'http://10.130.203.45:9090/emrapp/v1/formTemplate/' + getId;
+    	$.ajax({
+    		type:"GET",
+    		url:url_,
+    		dataType:"json",
+    		success:function(data){
+    			console.log(data);
+    			  Survey.Survey.cssType = "boostrap";
+    			    var data_ = data;
+    			    var survey = new Survey.Survey(data_.data.content);
+    			    survey.render("mySurveyJSName");
+  		        
+    		        setTimeout(function(){
+    		        	    var arrCheckbox = $(".sv_q_checkbox input[type='checkbox']");
+    	    		        var arrSpan = $(".sv_q_checkbox").children("span");
+
+    	    		        for(var i = 0 ; i < arrCheckbox.length; i++ ){
+    	    		            $(arrCheckbox[i]).attr("data-labelauty",$(arrSpan[i]).html());
+    	    		            $(arrSpan[i]).hide();
+    	    		        }
+    	    		        var arrCheckbox = $(".sv_q_radiogroup input[type='radio']");
+    	    		        var arrSpan = $(".sv_q_radiogroup").children("span");
+
+    	    		        for(var i = 0 ; i < arrCheckbox.length; i++ ){
+    	    		            $(arrCheckbox[i]).attr("data-labelauty",$(arrSpan[i]).html());
+    	    		            $(arrSpan[i]).hide();
+    	    		        }
+    		        	
+    		        	
+    		        	
+    		        	
+    		            $(":input[type='checkbox']").labelauty();
+    		            $(":input[type='radio']").labelauty();
+    		        },10);
+
+
+
+
+    		        $(".bzwh").click(function(){
+    		            $(this).parent().find(".tsmessage").fadeIn();
+    		        })
+    		        $(".gbts").click(function(){
+    		            $(this).parent().fadeOut();
+    		        })
+
+    		}
+    	})
+    }
+    
+
+
+
+    window.onload = function(){
+    	getData();
+       
+    }
+</script>
+
+</html>

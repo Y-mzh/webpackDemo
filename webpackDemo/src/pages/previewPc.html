@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>表单预览</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/layout.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/preview.css"/>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/EventBus-3.0.js"></script>
+    <script src="js/hostIp.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/knockout.js"></script>
+    <script src="js/survey.ko.js"></script>
+    <script src="js/surveyeditor.js"></script>
+	<script src="js/interfaceConfig.js"></script>
+    <script src="js/reflux.js"></script>
+    <script src="js/browser.min.js"></script>
+    <style> 
+    .pccss{
+     width: 80%;
+    height: 100%;
+    font-family: "微软雅黑",serif;
+    margin-left: 10%;
+    background-color: #FEFEFE;
+    border: 0 solid #C6CDD3;
+    padding:15px;
+    }
+    </style>
+</head>
+<body style="background-color:#FFFFFF ">
+<div></div>
+<div id="mySurveyJSName" class="pccss">
+
+</div>
+</body>
+<script type="application/javascript">
+
+  
+	
+    var getData = function(){
+    	var wjId = JSON.parse(sessionStorage.getItem("template"));
+    	    console.log(wjId.id);
+    	var getId = wjId.id;
+    	var url_ = urlObj.evaluate.newEva + getId;
+    	$.ajax({
+    		type:"GET",
+    		url:url_,
+    		dataType:"json",
+    		success:function(data){
+    			console.log(data);
+    			  Survey.Survey.cssType = "boostrap";
+    			    var data_ = data;
+    			    var survey = new Survey.Survey(data_.data.content);
+    			    survey.render("mySurveyJSName");
+					
+    			    function uncheck(obj)
+					 {
+					     var radio=obj;
+					     if (radio.tag==1)
+					     {
+					         radio.checked=false;
+					         radio.tag=0;
+					         console.log("0");
+					     }
+					     else
+					     {
+					         radio.checked=true;
+					         radio.tag=1
+					         console.log("1");
+					     }
+					 }
+					 $("input[type='radio']").click(function(){
+					     uncheck(this);
+					 })
+    			    
+    		        $(".bzwh").click(function(){
+    		            $(this).parent().find(".tsmessage").fadeIn();
+    		        })
+    		        $(".gbts").click(function(){
+    		            $(this).parent().fadeOut();
+    		        })
+
+    		}
+    	})
+    }
+    
+
+
+
+    window.onload = function(){
+    	getData();
+       
+    }
+</script>
+
+</html>
